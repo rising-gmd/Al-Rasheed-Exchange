@@ -1,0 +1,26 @@
+.instContainer {
+  min-height: 500px;
+  padding: 105px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: 16px;
+  }
+}
+
+.insTitle {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-color: var(--mantine-color-blue-6);
+  text-decoration-thickness: 2px;
+}
+
+.control {
+  transition: transform ease 0.2s, box-shadow ease 0.2s;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.control:hover {
+  transform: translate(0, -3px);
+  box-shadow: 0 20px 80px -10px var(--mantine-color-blue-6);
+}

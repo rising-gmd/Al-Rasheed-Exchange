@@ -1,0 +1,22 @@
+.qrCardParent {
+  min-height: 500px;
+  padding: 80px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: 0px;
+  }
+}
+
+.card {
+  width: rem(350px);
+  height: rem(350px);
+  margin-left: rem(48px);
+  background-image: url("../../assets/frame.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    width: 300px;
+  }
+
+}

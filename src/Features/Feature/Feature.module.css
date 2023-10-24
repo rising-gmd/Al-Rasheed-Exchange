@@ -1,0 +1,12 @@
+.featureCard {
+  cursor: default;
+  transition: transform 2s ease;
+  background-color: var(--mantine-color-blue-0);
+
+  @mixin hover {
+    color: var(--mantine-color-white);
+    background-color: var(--mantine-color-blue-6) !important;
+    transform: scale(1.03);
+    transition: transform 1s ease;
+  }
+}

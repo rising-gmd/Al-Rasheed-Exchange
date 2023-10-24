@@ -1,0 +1,22 @@
+.title {
+  font-family: Greycliff CF, var(--mantine-font-family);
+  font-weight: 900;
+  margin-bottom: var(--mantine-spacing-md);
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(28px);
+    text-align: left;
+  }
+}
+
+.mapParent {
+  height: rem(400px);
+  border: 2px solid white;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+  border-radius: rem(8px);
+}

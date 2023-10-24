@@ -1,0 +1,5 @@
+.global {
+  @media (min-width: em(750px)) {
+    padding: 0
+  }
+}

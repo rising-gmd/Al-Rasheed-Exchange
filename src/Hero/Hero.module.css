@@ -1,0 +1,83 @@
+.inner {
+  display: flex;
+  padding-top: rem(24px);
+  align-items: stretch;
+  padding-inline: 60px;
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: 8px;
+  }
+}
+
+.content {
+  max-width: rem(450px);
+  text-align: left;
+  margin-right: calc(var(--mantine-spacing-xl) * 4);
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    max-width: 100%;
+    margin-right: 0;
+  }
+}
+
+.title {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  font-size: rem(48px);
+  line-height: 1.2;
+  font-weight: 500;
+  font-variant: small-caps;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: rem(28px);
+  }
+}
+
+.subTitle {
+  line-height: 1.8;
+  text-decoration: underline;
+  text-decoration-color: var(--mantine-color-blue-6);
+  text-decoration-thickness: rem(2px);
+  text-underline-offset: rem(5px);
+}
+
+.image {
+  flex: 1;
+  height: rem(450px);
+  border-radius: var(--mantine-radius-md);
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    display: none;
+  }
+}
+
+.highlight {
+  position: relative;
+  background-color: var(--mantine-color-blue-light);
+  border-radius: var(--mantine-radius-sm);
+  padding: rem(4px) rem(12px);
+}
+
+.control {
+  transition: transform ease 0.2s, box-shadow ease 0.2s;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.control:hover {
+  transform: translate(0, -3px);
+  box-shadow: 0 20px 80px -10px var(--mantine-color-blue-6);
+}
+
+.controlDefault {
+  padding: 0.5em 2em;
+  background-color: var(--mantine-color-white);
+  color: var(--mantine-color-gray-6a);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform ease 0.2s;
+  white-space: nowrap;
+}
+
+.controlDefault:hover {
+  transform: translate(0, -3px);
+  transition: transform ease 0.2s;
+}

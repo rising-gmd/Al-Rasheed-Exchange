@@ -1,0 +1,10 @@
+.qrParent {
+  margin-top: calc(var(--mantine-spacing-xl) * 3);
+  background-color: var(--mantine-color-blue-0);
+  min-height: rem(500px);
+  border-radius: rem(8px);
+  margin-inline: 60px;
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin-inline: 24px;
+  }
+}

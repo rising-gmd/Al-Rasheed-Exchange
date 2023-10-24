@@ -1,0 +1,28 @@
+.header {
+  height: rem(70px);
+  margin-bottom: rem(64px);
+  background-color: var(--mantine-color-body);
+  border-bottom: rem(1px) solid
+    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-inline: 60px;
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: 8px;
+  }
+}
+
+.inner {
+  height: rem(70px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.companyName {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--mantine-color-blue-6);
+  font-family: 'Noto Kufi Arabic', sans-serif;
+}

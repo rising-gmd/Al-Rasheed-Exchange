@@ -1,0 +1,43 @@
+.wrapper {
+  min-height: rem(400px);
+  margin-top: calc(var(--mantine-spacing-xl) * 3);
+  background-image: linear-gradient(
+    -60deg,
+    var(--mantine-color-blue-2) 0%,
+    var(--mantine-color-blue-7) 100%
+  );
+  border-radius: var(--mantine-radius-md);
+  padding: calc(var(--mantine-spacing-xl) * 2);
+
+  margin-inline: 60px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: calc(var(--mantine-spacing-xl));
+    margin-inline: 24px;
+  }
+}
+
+.title {
+  font-family: Greycliff CF, var(--mantine-font-family);
+  color: var(--mantine-color-white);
+  line-height: 1;
+}
+
+.form {
+  background-color: var(--mantine-color-white);
+  padding: var(--mantine-spacing-xl);
+  border-radius: var(--mantine-radius-md);
+  box-shadow: var(--mantine-shadow-lg);
+}
+
+.social {
+  color: var(--mantine-color-white);
+
+  @mixin hover {
+    color: var(--mantine-color-blue-1);
+  }
+}
+
+.description {
+  color: var(--mantine-color-white);
+}
