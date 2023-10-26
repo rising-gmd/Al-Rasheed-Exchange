@@ -12,8 +12,15 @@ import Companies from './Companies/Companies.jsx';
 import Gallary from './Gallary/Gallary.jsx';
 import { useWindowScroll } from '@mantine/hooks';
 import Whatsapp from './Whatsapp/Whatsapp.jsx';
+import { withNamespaces } from 'react-i18next';
+import { useEffect } from 'react';
+import i18n from './i18n.js';
 
-const App = () => {
+const App = ({ t }) => {
+
+  useEffect(() => {
+    i18n.changeLanguage("ar")
+  }, [])
 
   return (
     <MantineProvider theme={theme}>
@@ -32,4 +39,4 @@ const App = () => {
   )
 }
 
-export default App
+export default withNamespaces()(App)

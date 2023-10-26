@@ -8,15 +8,15 @@ import forbes from "../assets/logos/forbes.svg"
 import macys from "../assets/logos/macys.svg"
 import menshealth from "../assets/logos/menshealth.svg"
 import mrbeat from "../assets/logos/mrbeast.svg"
+import { withNamespaces } from 'react-i18next';
 
-
-const Companies = () => {
+const Companies = ({ t }) => {
 
     return (
 
         <div className={classes.logos} id='#companies'>
 
-            <Text className={classes.companyTitle}>TRUSTED BY OVER 1K+ COMPANIES</Text>
+            <Text className={classes.companyTitle}>{t('TRUSTED BY OVER 1K+ COMPANIES')}</Text>
 
             <div className={classes.logosSlide}>
                 <img src={threeM} />
@@ -45,4 +45,4 @@ const Companies = () => {
     )
 }
 
-export default Companies
+export default withNamespaces()(Companies);

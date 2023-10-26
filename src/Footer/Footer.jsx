@@ -6,10 +6,10 @@ import Logo from "../assets/Logo.jpg"
 
 const links = [
     { link: '#home', label: 'Home' },
-    { link: '#companies', label: 'Companies' },
+    { link: '#companies', label: 'Testimonials' },
     { link: '#qrcode', label: 'QR Code' },
     { link: '#features', label: 'Our Services' },
-    { link: '#gallary', label: 'Gallary' },
+    { link: '#gallary', label: 'Gallery' },
     { link: '#contact', label: 'Contact Us' },
 ];
 

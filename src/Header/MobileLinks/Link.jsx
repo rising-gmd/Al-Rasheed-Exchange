@@ -1,8 +1,9 @@
 import { Button, Group, UnstyledButton } from '@mantine/core';
 import classes from './Link.module.css';
 import { IconHome } from '@tabler/icons-react';
+import { withNamespaces } from 'react-i18next'; 
 
-const Link = ({ link, active, setActive, toggle }) => {
+const Link = ({ link, active, setActive, toggle, t }) => {
 
     function handleScroll(link) {
 
@@ -28,10 +29,10 @@ const Link = ({ link, active, setActive, toggle }) => {
             fullWidth
         >
             <a>
-                {link.label}
+                {t(link.label)}
             </a>
         </Button>
     )
 }
 
-export default Link
+export default withNamespaces()(Link)

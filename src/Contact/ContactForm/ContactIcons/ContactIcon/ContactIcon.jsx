@@ -1,7 +1,9 @@
+import React from 'react';
 import { Box, Text, rem } from "@mantine/core";
+import { withNamespaces } from 'react-i18next'; 
 import classes from './ContactIcon.module.css';
 
-const ContactIcon = ({ Icon, title, description }) => {
+const ContactIcon = ({ Icon, title, description, t }) => {
     return (
         <div className={classes.wrapper} >
             <Box mr="md">
@@ -9,12 +11,12 @@ const ContactIcon = ({ Icon, title, description }) => {
             </Box>
             <div>
                 <Text size="xs" className={classes.title}>
-                    {title}
+                    {t(title)}
                 </Text>
-                <Text className={classes.description}>{description}</Text>
+                <Text className={classes.description}>{t(description)}</Text>
             </div>
         </div>
     );
 }
 
-export default ContactIcon
+export default withNamespaces()(ContactIcon);

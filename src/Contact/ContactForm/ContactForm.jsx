@@ -1,37 +1,37 @@
-import { Button, Group, TextInput, Textarea } from '@mantine/core'
-import React from 'react'
+import React from 'react';
+import { Button, Group, TextInput, Textarea } from '@mantine/core';
+import { withNamespaces } from 'react-i18next'; // Import withNamespaces
 import classes from './ContactForm.module.css';
 
-const ContactForm = () => {
+const ContactForm = ({ t }) => {
     return (
         <>
             <TextInput
-                label="Email"
-                placeholder="sheikh@email.com"
+                label={t('Email')}
+                placeholder="sheikhzahid@gmail.com"
                 required
                 classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <TextInput
-                label="Name"
-                placeholder="Sheikh Zahid"
+                label={t('Name')}
+                placeholder={t('Sheikh Zahid')} // Use the t function for the placeholder
                 mt="md"
-
                 classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <Textarea
                 withAsterisk
-                label="Description"
-                placeholder="I wanted to say that"
+                label={t('Description')}
+                placeholder={t('I wanted to say that')} // Use the t function for the placeholder
                 rows={12}
                 mt="md"
                 classNames={{ input: classes.input, label: classes.inputLabel }}
             />
 
             <Group justify="flex-end" mt="xl">
-                <Button className={classes.control}>Send message</Button>
+                <Button className={classes.control}>{t('Send message')}</Button> {/* Use the t function for the button text */}
             </Group>
         </>
-    )
+    );
 }
 
-export default ContactForm
+export default withNamespaces()(ContactForm); // Wrap the component with withNamespaces

@@ -1,9 +1,15 @@
 .instContainer {
   min-height: 500px;
-  padding: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    padding: 16px;
+    padding: 24px;
+    min-height: 400px;
+    justify-content: flex-start;
+    order: 2;
   }
 }
 
@@ -12,6 +18,8 @@
   text-underline-offset: 8px;
   text-decoration-color: var(--mantine-color-blue-6);
   text-decoration-thickness: 2px;
+  @media (max-width: $mantine-breakpoint-sm) {
+  }
 }
 
 .control {

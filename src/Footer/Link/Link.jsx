@@ -1,18 +1,16 @@
-import { Anchor } from '@mantine/core'
-import React from 'react'
+import { Anchor } from '@mantine/core';
+import React from 'react';
 import classes from './Link.module.css';
+import { withNamespaces } from 'react-i18next'; 
 
-const Link = ({ link }) => {
-
+const Link = ({ link, t }) => {
     function handleScroll(link) {
-
         event.preventDefault();
 
         const element = document.getElementById(link.link);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-
     }
 
     return (
@@ -25,10 +23,10 @@ const Link = ({ link }) => {
                 size="sm"
                 className={classes.link}
             >
-                {link.label}
+                {t(link.label)}
             </Anchor>
         </>
-    )
+    );
 }
 
-export default Link
+export default withNamespaces()(Link);

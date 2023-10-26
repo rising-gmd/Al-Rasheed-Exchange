@@ -10,8 +10,9 @@ const QR = () => {
         <Box className={classes.qrParent} id='#qrcode'>
             <SimpleGrid
                 cols={{ base: 1, sm: 2 }}
-                spacing={{ base: 10, sm: 'xl' }}
+                spacing={{ base: 0 }}
                 verticalSpacing={{ base: 'md', sm: 'xl' }}
+                className={classes.qrGrid}
             >
                 <QRInstructions />
                 <QRCard />

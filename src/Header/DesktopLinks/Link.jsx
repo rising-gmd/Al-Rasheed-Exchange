@@ -1,9 +1,9 @@
 import classes from './Link.module.css';
+import { withNamespaces } from 'react-i18next';
 
-const Link = ({ link, active, setActive }) => {
+const Link = ({ link, active, setActive, t }) => {
 
     function handleScroll(link) {
-
         event.preventDefault();
         setActive(link.link);
 
@@ -11,7 +11,6 @@ const Link = ({ link, active, setActive }) => {
         if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-
     }
 
     return (
@@ -20,9 +19,9 @@ const Link = ({ link, active, setActive }) => {
             className={classes.link}
             data-active={active === link.link || undefined}
             onClick={() => handleScroll(link)}>
-            {link.label}
+            {t(link.label)}
         </a>
-    )
+    );
 }
 
-export default Link
+export default withNamespaces()(Link);
